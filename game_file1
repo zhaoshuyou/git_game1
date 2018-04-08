@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+
+print("""hello,this is the start game for gess number ,in the range  1 to 10""")
+
+print('how many times will you take')
+
+
+import random
+rand_n=random.randint(1,10)
+
+def   input_num():
+	while 1:
+		try:
+			num=int(input('input the number you think is right :'))
+			break
+		except  ValueError:
+			print('please input the number')
+	return  num	
+'''
+num=input_num()
+print('the number you intput is:',num)
+#print('the randnum is :',rand_n)
+'''
+num=input_num()
+gess_t=1
+while(num!=rand_n):
+	gess_t+=1
+	if(num>rand_n):
+		print('this time is bigger')
+	else: 
+		print('this time is smaller')
+	num=input_num()
+
+else:
+	print('congratulation! the time(s) you take is :',gess_t)
+	
+
